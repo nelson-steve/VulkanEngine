@@ -15,6 +15,7 @@ namespace VulkanEngine {
 		Window& operator=(const Window&) = delete;
 
 		bool WindowShouldClose() { return glfwWindowShouldClose(m_Window); }
+		void CreateWindowSurface(VkInstance instance, VkSurfaceKHR* surface);
 		void CreateWindow();
 	private:
 		GLFWwindow* m_Window;

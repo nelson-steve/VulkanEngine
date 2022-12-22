@@ -2,6 +2,7 @@
 
 #include "Window.h"
 #include "pipeline.h"
+#include "VulkanDevice.h"
 
 class Engine
 {
@@ -20,6 +21,12 @@ private:
 	void CreateWindow();
 	void Make_Instance();
 
-	VulkanEngine::Window* window;
-	VulkanEngine::Pipeline pipeline{ "Shaders/Shader.vert", "Shaders/Shader.frag" };
+	VulkanEngine::Window* window;///////////////////////////////////// Created window
+	VulkanEngine::VulkanDevice device{*window};////////////////////////////////////// Created device
+	VulkanEngine::Pipeline pipeline{
+		device,
+		"Shaders/Shader.vert",
+		"Shaders/Shader.frag",
+		VulkanEngine::Pipeline::DefaultConfigInfo(m_Width, m_Height)
+	};////////////////// Created pipeline
 };

@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClInclude Include="src\VulkanEngine\config.h" />
     <ClInclude Include="src\VulkanEngine\Engine.h" />
+    <ClInclude Include="src\VulkanEngine\VulkanDevice.h" />
     <ClInclude Include="src\VulkanEngine\VKPreCompiledHeader.h" />
     <ClInclude Include="src\VulkanEngine\instance.h" />
     <ClInclude Include="src\VulkanEngine\pipeline.h" />
@@ -153,6 +154,7 @@
   <ItemGroup>
     <ClCompile Include="src\VulkanEngine\Engine.cpp" />
     <ClCompile Include="src\VulkanEngine\Main.cpp" />
+    <ClCompile Include="src\VulkanEngine\VulkanDevice.cpp" />
     <ClCompile Include="src\VulkanEngine\pipeline.cpp" />
     <ClCompile Include="src\VulkanEngine\VKPreCompiledHeader.cpp" />
     <ClCompile Include="src\VulkanEngine\Window.cpp" />
